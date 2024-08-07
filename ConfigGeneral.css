@@ -1,0 +1,21 @@
+body{
+
+    background-color: #0B2027;
+}
+
+nav{
+    background-color: #70A9A1;
+    width: auto;
+    height: 150px;
+}
+
+#LogoYomuBox{
+    width: 12rem;
+    height: 5rem;
+    border-radius: 15%;
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
