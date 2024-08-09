@@ -7,6 +7,7 @@ nav{
     background-color: #70A9A1;
     width: auto;
     height: 150px;
+    display: flex;
 }
 
 #LogoYomuBox{
@@ -18,4 +19,23 @@ nav{
     margin: 0;
     padding:0;
     box-sizing: border-box;
+}
+
+.flex-container{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Alinha os itens verticalmente */
+    }
+
+    nav a {
+        margin: 5px 0; /* Margem superior e inferior entre os itens */
+        width: 100%; /* Links ocupam toda a largura */
+        text-align: center; /* Centraliza o texto dos links */
+    }
 }

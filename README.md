@@ -4,3 +4,5 @@ Projeto de Controle para livros. - ADS 4º Semestre/2024 - Faculdade Senac Blume
 YomuBox é um organizador de leitura, onde pode controlar suas metas e quais os livros estão sendo lidos.
 
 
+Funcionalidades: 
+- Listagem de livros lidos.
