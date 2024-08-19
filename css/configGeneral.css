@@ -81,6 +81,10 @@ main {
     justify-content: center;
 }
 
+a{
+   color: black;
+}
+
 /*fontes para o projeto*/
 .poppins-thin {
     font-family: "Poppins", sans-serif;

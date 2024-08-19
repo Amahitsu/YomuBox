@@ -1,0 +1,79 @@
+.login-container {
+    display: flex;
+    width: 600px;
+    height: 600px;
+    background-color: #70A9A1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15%;
+    margin-top: 10rem;
+    position: relative;
+}
+
+/*titulo Login*/
+.title-login {
+    display: flex;
+    width: 100%;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20%;
+
+}
+
+.formLogin {
+    width: 100%;
+    max-width: 500px;
+    /* Limite a largura máxima do formulário */
+    margin: 0 auto;
+    /* Centralize o formulário dentro do contêiner */
+}
+
+input {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 60px;
+    /* Espaço entre os campos de entrada */
+}
+
+.input-group label {
+    position: absolute;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: 0.2s;
+    margin-left: 10px;
+}
+
+.input-group input {
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px 100px 10px 100px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    /* Inclui padding e border na largura total do elemento */
+}
+
+.input-group input:focus+label,
+.input-group input:not(:placeholder-shown)+label {
+    margin: 0 auto;
+    font-size: 12px;
+    color: #333;
+}
+
+button {
+    width: 50%;
+    height: 50%;
+    padding: 10px;
+    font-size: 20px;
+}
