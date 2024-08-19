@@ -13,7 +13,7 @@
 
     <main>
         <div class="login-container">
-            <form id="formLogin" action="/v1/principal.html" method="get">
+            <form id="formLogin">
                 <div class="title-login poppins-semibold"> Login </div>
                 <div class="input-group">
                     <label class="poppins-black" for="username">Nome de Usuário</label>
@@ -27,7 +27,12 @@
             </form>
         </div>
     </main>
-
+    <div id="messageOverlay" class="overlay" style="display: none;">
+        <div class="message-box">
+            <p id="messageElement"></p> <!-- O texto será inserido aqui pelo JavaScript -->
+            <button class="poppins-semibold" href="login.html">ok</button>
+        </div>
+    </div>
     <script src="/js/login.js"></script>
 </body>
 

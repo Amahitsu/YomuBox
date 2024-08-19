@@ -7,34 +7,31 @@ const users = [
 ];
 
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('formLogin');
-    const messageElement = document.getElementById('message');
 
-    // Verifica se os elementos foram encontrados
-    if (!form || !messageElement) {
-        console.error('Formulário ou mensagem não encontrado.');
+    const form = document.getElementById('formLogin');
+    const messageElement = document.getElementById('messageElement');
+    const messageOverlay = document.getElementById('messageOverlay');
+
+    if (!form || !messageElement || !messageOverlay) {
+        console.error('Elemento(s) do formulário ou da mensagem não encontrado(s).');
         return;
     }
 
-    // Manipulador de evento de envio do formulário
     form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Evita o envio do formulário
+        event.preventDefault();
 
-        // Obtém os valores dos inputs
-        const getUsername = document.getElementById('username').value;
-        const getPassword = document.getElementById('password').value;
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
 
-        // Verifica se o usuário e senha existem no JSON
-        const user = users.find(u => u.username === getUsername && u.password === getPassword);
-
-        if (user) {
-            window.location.href = "/v1/principal.html";
-
+        if (username === 'usuario1' && password === 'senha1') {
+            messageElement.textContent = 'Login realizado com sucesso!';
+            messageOverlay.style.display = 'flex';
+            window.location.href = '/v1/principal.html'
         } else {
-            alert("Nome de usuário ou senha incorretos.");
+            messageElement.textContent = 'Nome de usuário ou senha incorretos.';
+            messageOverlay.style.display = 'flex';
         }
-
-        // Limpa o formulário
-        form.reset();
     });
+    // Limpa o formulário
+    form.reset();
 });
