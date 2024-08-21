@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (username === 'usuario1' && password === 'senha1') {
             messageElement.textContent = 'Login realizado com sucesso!';
             messageOverlay.style.display = 'flex';
-            window.location.href = '/v1/principal.html'
+            window.location.href = './v1/principal.html'
         } else {
             messageElement.textContent = 'Nome de usuário ou senha incorretos.';
             messageOverlay.style.display = 'flex';
