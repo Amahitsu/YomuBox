@@ -54,6 +54,11 @@ nav {
     }
 }
 
+#buttonAdd{
+    width: 100px;
+    height: 30px;
+}
+
 #flexBoxCaminhos {
     display: flex;
     flex-direction: row;

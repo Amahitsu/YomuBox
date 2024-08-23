@@ -2,7 +2,7 @@
     width: 1000px;
     height: 600px;
     background-color: #D9D9D9;
-    border-radius: 10%;
+    border-radius: 15%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -11,9 +11,13 @@
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto;
-    text-align: center  ;
+    text-align: center;
 }
 
-.button{
-
+.titulo {
+    margin: 20px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    /* Borda padrão */
+    transition: border-color 0.3s ease;
 }
