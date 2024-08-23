@@ -1,0 +1,19 @@
+.list-container {
+    width: 1000px;
+    height: 600px;
+    background-color: #D9D9D9;
+    border-radius: 10%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+    margin-top: 10rem;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    text-align: center  ;
+}
+
+.button{
+
+}

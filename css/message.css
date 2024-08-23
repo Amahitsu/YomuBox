@@ -23,3 +23,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
 }
+
+#confirm{
+    margin-top: 20px;
+    text-align: top;
+}
