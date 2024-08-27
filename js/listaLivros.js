@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function saveList() {
         const items = [];
         itemList.querySelectorAll('li').forEach(li => {
-            const itemText = li.childNodes[1].textContent;
+            const itemText = li.querySelector('.divList').childNodes[1].textContent;
             const checked = li.querySelector('input').checked;
             items.push({ text: itemText, checked: checked });
         });
