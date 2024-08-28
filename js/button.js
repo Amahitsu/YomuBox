@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         div4.className = "buttons-list";
 
         const input = document.createElement('input');
+        input.className = "inputTitleList";
         input.type = 'text';
         input.classList.add('poppins-bold');
         input.value = title;

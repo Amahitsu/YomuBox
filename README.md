@@ -11,4 +11,7 @@ Caso não haver sucesso de login será apresentado na tela um erro, informando q
 
 Funcionalidades: 
 - Listagem de livros lidos.
+- Controle de leitura (qual página está a leitura)
+- Criação de listas conforme o gosto (Lista1, Lista2, Lista3, etc).
+
 

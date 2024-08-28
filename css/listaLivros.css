@@ -38,6 +38,18 @@
     gap:20px
 }
 
+.button-return{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#buttonReturn{
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+}
+
 .divList{
     display: flex;
     flex-direction: row;
