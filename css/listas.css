@@ -4,24 +4,42 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    justify-content: space-between;
+    justify-content: center;
     gap: 30px;
 }
 
-#list-livros {
+.list-list {
     width: 300px;
     height: 100px;
     margin: 0 auto;
     background-color: #d9d9d9;
     border-radius: 15px;
     display: flex;
-    text-align: center;
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
-    flex-direction: row;
+    gap: 10px;
+    flex-direction: column-reverse;
 }
 
 #tituloLivro {
     font-size: 25px;
+}
+
+#adicionarLista{
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+}
+
+#buttonReturn{
+    width: 100px;   
+    height: 50px;
+    font-size: 15px;
+}
+.container-Button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap:20px
 }

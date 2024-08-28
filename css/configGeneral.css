@@ -14,6 +14,7 @@ nav {
     width: 12rem;
     height: 5rem;
     border-radius: 15%;
+    
 }
 
 * {
@@ -24,11 +25,17 @@ nav {
     text-decoration: none;
 }
 
+#Logout{
+    display: flex;
+    color: aliceblue;
+    align-items: center;
+    justify-content: end;
+}
+
 .flex-container {
     display: flex;
     margin-left: 20px;
     margin-top: 30px;
-    justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -46,7 +53,8 @@ nav {
         /* Centraliza o texto dos links */
     }
 
-    #caminho {
+    .flex-container {
+        flex-direction: column;
         flex: 1 1 auto;
         /* Permite que os itens se ajustem conforme necessário */
         margin: 5px 0;
@@ -82,7 +90,6 @@ nav {
 main {
     width: 100%;
     display: flex;
-
     justify-content: center;
 }
 
@@ -197,5 +204,4 @@ a{
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: italic;
-}
-
+} 

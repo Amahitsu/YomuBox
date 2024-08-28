@@ -9,20 +9,25 @@
 </head>
 
 <body>
-    <nav>
-        <header>
-            <nav>
-                <div class="flex-container">
+    <header>
+        <nav>
+            <div class="flex-container">
+                <div class="navbar">
                     <img id="LogoYomuBox" src="../Components/Image/YomuBox.png" alt="LogoYomuBox">
+                    <label id="Logout" class="poppins-black">Sair</label>
                 </div>
-            </nav>
-        </header>
-    </nav>
+            </div>
+        </nav>
+    </header>
 
+    <div class="container-Button">
+        <button class="poppins-black" id="buttonReturn" onclick="retornar()">Voltar</button>
+        <button class="poppins-black" id="adicionarLista" onclick="adicionarLista()">Adicionar Lista    </button>
+    </div>
 
     <div class="list-container">
         <div class="titulo">
-            <h1> Titulo </h1>
+            <h1 id="tituloLista "> </h1>
         </div>
         <div class="add-item-container">
             <input type="text" id="itemInput" placeholder="Adicionar novo item...">
@@ -34,6 +39,8 @@
        
     </div>
 
+
+    <script src="../js/button.js"></script>
     <script src="../js/listaLivros.js"></script>
 </body>
 

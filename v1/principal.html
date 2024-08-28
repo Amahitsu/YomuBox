@@ -11,21 +11,26 @@
     <header>
         <nav>
             <div class="flex-container">
-                <img id="LogoYomuBox" src="../Components/Image/YomuBox.png" alt="LogoYomuBox">
+                <div class="itens-nav">
+                    <img id="LogoYomuBox" src="../Components/Image/YomuBox.png" alt="LogoYomuBox">
+                    <label id="Logout" class="poppins-black">Sair</label>
+                </div>
             </div>
         </nav>
-    </header>  
+    </header>
 
     <main>
-
-        <ul id="flexBoxCaminhos">
-            <li id="caminho"><a class="poppins-semibold" href="listas.html ">Lista de Livros</a></li>
-            <li id="caminho"><a class="poppins-semibold" href="#">Metas</a></li>
-        </ul>
-
-        <button id="buttonReturn" onclick="retornar()">Voltar</button>
+        <div class="flex-container">
+            <ul id="flexBoxCaminhos">
+                <li id="caminho"><a class="poppins-semibold" href="listas.html ">Lista de Livros</a></li>
+                <li id="caminho"><a class="poppins-semibold" href="#">Metas</a></li>
+            </ul>
+        </div>
     </main>
-    
+
+    <button class="poppins-black" id="buttonReturn" onclick="retornar()">Voltar</button>
+
+    <script src="../js/button.js"></script>
 </body>
 
 </html>

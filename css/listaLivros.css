@@ -48,3 +48,8 @@
     flex-direction: row;
     justify-content: space-around;
 }
+
+.buttonIncrementDecrement{
+    width: 10px;
+    font-size: 10px;
+}

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (itemText !== '') {
             if (editingItem) {
                 // Atualizar item existente
-                const textNode = editingItem.querySelector('div').childNodes[1];
+                const textNode = editingItem.querySelector('.divList').childNodes[1];
                 textNode.textContent = itemText;
                 editingItem = null; // Limpar a referência ao item editado
             } else {
@@ -29,9 +29,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 const textNode = document.createTextNode(itemText);
 
                 // Adicionar a checkbox e o texto ao item da lista
-                li.appendChild(div);
                 div.appendChild(checkbox);
                 div.appendChild(textNode);
+
+                // Adicionar visor de contador
+                const counterDisplay = document.createElement('span');
+                counterDisplay.textContent = '0';
+                counterDisplay.className = 'counter-display';
+                div2.appendChild(counterDisplay);
+
+                // Adicionar botões de incremento e decremento para o contador
+                const buttonIncrement = document.createElement('button');
+                buttonIncrement.textContent = '+';
+                buttonIncrement.addEventListener('click', () => {
+                    updateCounter(counterDisplay, 1);
+                });
+                div2.appendChild(buttonIncrement);
+
+                const buttonDecrement = document.createElement('button');
+                buttonDecrement.textContent = '-';
+                buttonDecrement.addEventListener('click', () => {
+                    updateCounter(counterDisplay, -1);
+                });
+                div2.appendChild(buttonDecrement);
 
                 // Adicionar um botão de remover
                 const removeButton = document.createElement('button');
@@ -50,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     editingItem = li; // Armazena o item que está sendo editado
                 });
 
+                li.appendChild(div);
                 li.appendChild(div2);
                 div2.appendChild(editButton);
                 div2.appendChild(removeButton);
@@ -64,13 +85,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Função para atualizar o valor do contador
+    function updateCounter(counterDisplay, delta) {
+        const currentValue = parseInt(counterDisplay.textContent) || 0;
+        const newValue = currentValue + delta;
+        if (newValue >= 0) { // Evita valores negativos
+            counterDisplay.textContent = newValue;
+            saveList(); // Salvar a lista após atualizar o contador
+        }
+    }
+
     // Função para salvar a lista no Local Storage
     function saveList() {
         const items = [];
         itemList.querySelectorAll('li').forEach(li => {
             const itemText = li.querySelector('.divList').childNodes[1].textContent;
             const checked = li.querySelector('input').checked;
-            items.push({ text: itemText, checked: checked });
+            const counter = li.querySelector('.counter-display').textContent;
+            items.push({ text: itemText, checked: checked, counter: parseInt(counter) });
         });
         localStorage.setItem('itemList', JSON.stringify(items));
     }
@@ -94,9 +126,30 @@ document.addEventListener('DOMContentLoaded', () => {
             const textNode = document.createTextNode(item.text);
 
             // Adicionar a checkbox e o texto ao item da lista
-            li.appendChild(div);
             div.appendChild(checkbox);
             div.appendChild(textNode);
+
+            // Adicionar visor de contador
+            const counterDisplay = document.createElement('span');
+            counterDisplay.textContent = item.counter || '0';
+            counterDisplay.className = 'counter-display';
+            div2.appendChild(counterDisplay);
+
+            // Adicionar botões de incremento e decremento para o contador
+            const buttonIncrement = document.createElement('button');
+            buttonIncrement.textContent = '+';
+            buttonIncrement.addEventListener('click', () => {
+                updateCounter(counterDisplay, 1);
+            });
+            div2.appendChild(buttonIncrement);
+
+            const buttonDecrement = document.createElement('button');
+            buttonDecrement.className = "buttonIncrementDecrement"
+            buttonDecrement.textContent = '-';
+            buttonDecrement.addEventListener('click', () => {
+                updateCounter(counterDisplay, -1);
+            });
+            div2.appendChild(buttonDecrement);
 
             // Adicionar um botão de remover
             const removeButton = document.createElement('button');
@@ -115,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 editingItem = li; // Armazena o item que está sendo editado
             });
 
+            li.appendChild(div);
             li.appendChild(div2);
             div2.appendChild(editButton);
             div2.appendChild(removeButton);
