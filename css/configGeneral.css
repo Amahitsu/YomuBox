@@ -13,6 +13,7 @@ nav {
 .navbar{
     display: flex;
     gap: 63rem;
+    margin: 10px        ;
 }
 
 #LogoYomuBox {
@@ -35,6 +36,7 @@ nav {
     color: aliceblue;
     align-items: center;
     justify-content: end;
+    font-size: 20px;
 }
 
 .flex-container {

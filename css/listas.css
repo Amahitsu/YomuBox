@@ -6,6 +6,7 @@
     padding: 0;
     justify-content: center;
     gap: 30px;
+    flex-direction: row;
 }
 
 .list-list {
@@ -20,6 +21,12 @@
     margin-top: 2rem;
     gap: 10px;
     flex-direction: column-reverse;
+}
+
+#list-list{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }
 
 #tituloLivro {
