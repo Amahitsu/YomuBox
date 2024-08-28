@@ -2,7 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('itemInput');
     const button = document.getElementById('buttonAdd');
     const itemList = document.getElementById('list-livros');
+    const tituloElemento = document.getElementById('tituloLista'); // Elemento <h1> para o título
     let editingItem = null; // Variável para armazenar o item que está sendo editado
+
+    // Captura o título da lista da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const listTitle = urlParams.get('titulo') || 'Minha Lista de Livros'; // Título padrão se não houver parâmetro
+
+    // Atualiza o elemento <h1> com o título da lista
+    tituloElemento.textContent = `${listTitle}`;
 
     // Função para adicionar um item
     function addItem() {
@@ -104,12 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const counter = li.querySelector('.counter-display').textContent;
             items.push({ text: itemText, checked: checked, counter: parseInt(counter) });
         });
-        localStorage.setItem('itemList', JSON.stringify(items));
+        localStorage.setItem(`itemList_${listTitle}`, JSON.stringify(items));
     }
 
     // Função para carregar a lista do Local Storage
     function loadList() {
-        const items = JSON.parse(localStorage.getItem('itemList')) || [];
+        const items = JSON.parse(localStorage.getItem(`itemList_${listTitle}`)) || [];
         items.forEach(item => {
             const li = document.createElement('li');
             const div = document.createElement('div');
@@ -144,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             div2.appendChild(buttonIncrement);
 
             const buttonDecrement = document.createElement('button');
-            buttonDecrement.className = "buttonIncrementDecrement"
+            buttonDecrement.className = "buttonIncrementDecrement";
             buttonDecrement.textContent = '-';
             buttonDecrement.addEventListener('click', () => {
                 updateCounter(counterDisplay, -1);

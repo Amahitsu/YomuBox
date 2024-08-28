@@ -10,6 +10,11 @@ nav {
     display: flex;
 }
 
+.navbar{
+    display: flex;
+    gap: 63rem;
+}
+
 #LogoYomuBox {
     width: 12rem;
     height: 5rem;
