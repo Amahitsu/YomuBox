@@ -3,26 +3,6 @@ body {
     background-color: #0B2027;
 }
 
-nav {
-    background-color: #70A9A1;
-    width: auto;
-    height: 150px;
-    display: flex;
-}
-
-.navbar{
-    display: flex;
-    gap: 63rem;
-    margin: 10px        ;
-}
-
-#LogoYomuBox {
-    width: 12rem;
-    height: 5rem;
-    border-radius: 15%;
-    
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -31,18 +11,54 @@ nav {
     text-decoration: none;
 }
 
-#Logout{
+nav {
+    background-color: #70A9A1;
+    width: auto;
+    height: 150px;
+    display: flex;
+}
+
+.navbar {
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+}
+
+#LogoYomuBox {
+    width: 12rem;
+    height: 5rem;
+    border-radius: 15%;
+}
+
+#buttonReturn {
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+    justify-content: center;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 30px;
+    text-align: center;
+}
+
+#Logout {
     display: flex;
     color: aliceblue;
     align-items: center;
-    justify-content: end;
     font-size: 20px;
 }
 
 .flex-container {
+    width: 100%;
     display: flex;
-    margin-left: 20px;
-    margin-top: 30px;
+    margin: 40px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -67,9 +83,17 @@ nav {
         margin: 5px 0;
         /* Margem superior e inferior entre os itens */
     }
+
+    li {
+        flex-direction: column;
+        flex: 1 1 auto;
+        /* Permite que os itens se ajustem conforme necessário */
+        margin: 5px 0;
+        /* Margem superior e inferior entre os itens */
+    }
 }
 
-#buttonAdd{
+#buttonAdd {
     width: 100px;
     height: 30px;
 }
@@ -100,8 +124,9 @@ main {
     justify-content: center;
 }
 
-a{
-   color: black;
+a {
+    color: black;
+    cursor: pointer;
 }
 
 /*fontes para o projeto*/
@@ -211,4 +236,4 @@ a{
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: italic;
-} 
+}

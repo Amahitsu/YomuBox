@@ -7,6 +7,10 @@ function retornar(){
     window.history.back();
 }
 
+function sair(){
+    window.location.href = '/YomuBox/index.html';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const listContainer = document.getElementById('list-list');
     const addButton = document.getElementById('adicionarLista');
@@ -24,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const div4 = document.createElement('div');
         div3.className = "list-list";
         div4.className = "buttons-list";
+
 
         const input = document.createElement('input');
         input.className = "inputTitleList";
