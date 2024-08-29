@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/configGeneral.css">
+    <link rel="stylesheet" href="../css/lista.css">
 </head>
 
 <body>
@@ -13,14 +14,16 @@
             <div class="flex-container">
                 <div class="navbar">
                     <img id="LogoYomuBox" src="../Components/Image/YomuBox.png" alt="LogoYomuBox">
-                    <label id="Logout" class="poppins-black" onclick="retornar()">Sair</label>
+                </div>
+                <div>
+                    <a id="Logout" class="poppins-black" onclick="sair()">Sair</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <div class="flex-container">
+        <div class="flex-menu">
             <ul id="flexBoxCaminhos">
                 <li id="caminho"><a class="poppins-semibold" href="listas.html">Lista de Livros</a></li>
                 <li id="caminho"><a class="poppins-semibold" href="#">Metas (Em desenvolvimento)</a></li>

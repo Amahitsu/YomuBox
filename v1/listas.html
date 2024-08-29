@@ -15,21 +15,22 @@
             <div class="flex-container">
                 <div class="navbar">
                     <img id="LogoYomuBox" src="../Components/Image/YomuBox.png" alt="LogoYomuBox">
-                    <label id="Logout" class="poppins-black" onclick="retornar()">Sair</label>
+                </div>
+                <div>
+                    <a id="Logout" class="poppins-black" onclick="sair()">Sair</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="container-Button">
+    <div class="button-container">
         <button class="poppins-black" id="buttonReturn" onclick="retornar()">Voltar</button>
         <button class="poppins-black" id="adicionarLista" onclick="adicionarLista()">Adicionar Lista</button>
     </div>
     <main>
-        <div class="list-all-container">
-            <ul id="list-list">
+        <div class="list-list-container">
+        <ul id="list-list" class="list-all-container">
             </ul>
-
         </div>
     </main>
 

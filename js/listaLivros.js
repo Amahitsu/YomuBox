@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Criar uma checkbox
                 const checkbox = document.createElement('input');
                 checkbox.type = 'checkbox';
+                checkbox.className = "checkboxList"
 
                 // Criar um elemento para o texto do item
                 const textNode = document.createTextNode(itemText);
