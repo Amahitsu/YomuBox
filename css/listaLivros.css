@@ -44,9 +44,9 @@
     flex-direction: row;
 }
 
-li.checked {
-    text-decoration: line-through; /* Risca o texto */
-    color: gray; /* Opcional: muda a cor do texto */
+.checked {
+    text-decoration: line-through; /* Riscar o texto */
+    color: gray; /* Opcional: mudar a cor do texto */
 }
 
 .divButton{
@@ -58,4 +58,9 @@ li.checked {
 .buttonIncrementDecrement{
     width: 10px;
     font-size: 10px;
+}
+
+.editButton{
+width: 30px;
+height: 30px;
 }
