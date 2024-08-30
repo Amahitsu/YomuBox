@@ -16,3 +16,5 @@ Funcionalidades:
 
 
 Link para protótipo: https://www.figma.com/design/JmB1C0e6DyfXmyWrFP55Zw/YomuBox---Controle-de-Livros---Fullstack-Senac-4-semestre?node-id=19-5&t=zNvHh96wxR2w4LWs-1
+
+Link GitPages: https://amahitsu.github.io/YomuBox/
