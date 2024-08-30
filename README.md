@@ -15,3 +15,4 @@ Funcionalidades:
 - Criação de listas conforme o gosto (Lista1, Lista2, Lista3, etc).
 
 
+Link para protótipo: https://www.figma.com/design/JmB1C0e6DyfXmyWrFP55Zw/YomuBox---Controle-de-Livros---Fullstack-Senac-4-semestre?node-id=19-5&t=zNvHh96wxR2w4LWs-1
