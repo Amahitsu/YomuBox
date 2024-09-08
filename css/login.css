@@ -1,3 +1,13 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .login-container {
     display: flex;
     width: 600px;
@@ -7,11 +17,10 @@
     justify-content: center;
     align-items: center;
     border-radius: 15%;
-    margin-top: 10rem;
     position: relative;
 }
 
-/*titulo Login*/
+/* Título Login */
 .title-login {
     display: flex;
     width: 100%;
@@ -20,15 +29,12 @@
     align-items: center;
     text-align: center;
     margin-bottom: 20%;
-
 }
 
 .formLogin {
     width: 100%;
     max-width: 500px;
-    /* Limite a largura máxima do formulário */
     margin: 0 auto;
-    /* Centralize o formulário dentro do contêiner */
 }
 
 input {
@@ -41,7 +47,6 @@ input {
 .input-group {
     position: relative;
     margin-bottom: 60px;
-    /* Espaço entre os campos de entrada */
 }
 
 .input-group label {
@@ -61,7 +66,6 @@ input {
     border-radius: 4px;
     font-size: 16px;
     box-sizing: border-box;
-    /* Inclui padding e border na largura total do elemento */
 }
 
 .input-group input:focus+label,
@@ -76,4 +80,64 @@ button {
     height: 50%;
     padding: 10px;
     font-size: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .login-container {
+        width: 500px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .title-login {
+        font-size: 40px;
+        margin-bottom: 15%;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .title-login {
+        font-size: 35px;
+        margin-bottom: 10%;
+    }
+
+    .input-group input {
+        padding: 15px 80px 10px 80px;
+    }
+
+    button {
+        width: 60%;
+        /* Reduzido para não colar nas bordas */
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .title-login {
+        font-size: 30px;
+        margin-bottom: 8%;
+    }
+
+    .input-group input {
+        padding: 10px 60px 8px 60px;
+    }
+
+    button {
+        width: 70%;
+        /* Reduzido ainda mais em telas menores */
+        font-size: 16px;
+    }
 }
