@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/configGeneral.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/message.css">
+</head>
+
+<body>
+
+    <main>
+        <div class="login-container">
+            <form id="formCadastro">
+                <div class="title-login poppins-semibold"> Cadastro </div>
+                <div class="input-group">
+                    <label class="poppins-black" for="username">Nome de Usuário</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label class="poppins-black" for="password">Senha</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label class="poppins-black" for="confirmPassword">Confirmar Senha</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <button class="poppins-semibold" type="submit">Cadastrar</button>
+                <a href="\index.html" class="poppins-semibold" id="voltarLogin">Voltar ao Login</a>
+            </form>
+        </div>
+    </main>
+    <div id="messageOverlay" class="overlay" style="display: none;">
+        <div class="message-box">
+            <p id="messageElement"></p> <!-- O texto será inserido aqui pelo JavaScript -->
+            <button id="confirm" class="poppins-semibold" onclick="fecharAviso()">ok</button>
+        </div>
+    </div>
+    <script src="\js\cadastro.js"></script>
+</body>
+
+</html>

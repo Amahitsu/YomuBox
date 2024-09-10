@@ -10,6 +10,7 @@ body {
 
 .login-container {
     display: flex;
+    flex-direction: column; /* Adicionado para alinhar os elementos verticalmente */
     width: 600px;
     height: 600px;
     background-color: #70A9A1;
@@ -22,11 +23,9 @@ body {
 
 /* Título Login */
 .title-login {
-    display: flex;
     width: 100%;
     font-size: 50px;
     justify-content: center;
-    align-items: center;
     text-align: center;
     margin-bottom: 20%;
 }
@@ -37,16 +36,9 @@ body {
     margin: 0 auto;
 }
 
-input {
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    text-align: center;
-}
-
 .input-group {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 40px; /* Reduzido o espaçamento entre os inputs */
 }
 
 .input-group label {
@@ -70,16 +62,21 @@ input {
 
 .input-group input:focus+label,
 .input-group input:not(:placeholder-shown)+label {
-    margin: 0 auto;
     font-size: 12px;
     color: #333;
 }
 
+/* Botões */
 button {
     width: 50%;
-    height: 50%;
     padding: 10px;
     font-size: 20px;
+    display: block; /* Faz o botão ocupar uma linha inteira */
+    margin: 0 auto; /* Centraliza o botão */
+}
+
+button:not(:last-child) {
+    margin-bottom: 20px; /* Adiciona espaçamento entre os botões */
 }
 
 /* Responsividade */
@@ -114,7 +111,6 @@ button {
 
     button {
         width: 60%;
-        /* Reduzido para não colar nas bordas */
         font-size: 18px;
     }
 }
@@ -137,7 +133,6 @@ button {
 
     button {
         width: 70%;
-        /* Reduzido ainda mais em telas menores */
         font-size: 16px;
     }
 }
