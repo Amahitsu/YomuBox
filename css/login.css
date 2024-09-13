@@ -1,5 +1,16 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .login-container {
     display: flex;
+    flex-direction: column; /* Adicionado para alinhar os elementos verticalmente */
     width: 600px;
     height: 600px;
     background-color: #70A9A1;
@@ -7,41 +18,27 @@
     justify-content: center;
     align-items: center;
     border-radius: 15%;
-    margin-top: 10rem;
     position: relative;
 }
 
-/*titulo Login*/
+/* Título Login */
 .title-login {
-    display: flex;
     width: 100%;
     font-size: 50px;
     justify-content: center;
-    align-items: center;
     text-align: center;
     margin-bottom: 20%;
-
 }
 
 .formLogin {
     width: 100%;
     max-width: 500px;
-    /* Limite a largura máxima do formulário */
     margin: 0 auto;
-    /* Centralize o formulário dentro do contêiner */
-}
-
-input {
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    text-align: center;
 }
 
 .input-group {
     position: relative;
-    margin-bottom: 60px;
-    /* Espaço entre os campos de entrada */
+    margin-bottom: 40px; /* Reduzido o espaçamento entre os inputs */
 }
 
 .input-group label {
@@ -61,19 +58,81 @@ input {
     border-radius: 4px;
     font-size: 16px;
     box-sizing: border-box;
-    /* Inclui padding e border na largura total do elemento */
 }
 
 .input-group input:focus+label,
 .input-group input:not(:placeholder-shown)+label {
-    margin: 0 auto;
     font-size: 12px;
     color: #333;
 }
 
+/* Botões */
 button {
     width: 50%;
-    height: 50%;
     padding: 10px;
     font-size: 20px;
+    display: block; /* Faz o botão ocupar uma linha inteira */
+    margin: 0 auto; /* Centraliza o botão */
+}
+
+button:not(:last-child) {
+    margin-bottom: 20px; /* Adiciona espaçamento entre os botões */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .login-container {
+        width: 500px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .title-login {
+        font-size: 40px;
+        margin-bottom: 15%;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .title-login {
+        font-size: 35px;
+        margin-bottom: 10%;
+    }
+
+    .input-group input {
+        padding: 15px 80px 10px 80px;
+    }
+
+    button {
+        width: 60%;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .title-login {
+        font-size: 30px;
+        margin-bottom: 8%;
+    }
+
+    .input-group input {
+        padding: 10px 60px 8px 60px;
+    }
+
+    button {
+        width: 70%;
+        font-size: 16px;
+    }
 }

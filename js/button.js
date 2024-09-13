@@ -8,7 +8,8 @@ function retornar(){
 }
 
 function sair(){
-    window.location.href = '/YomuBox/index.html';
+    window.location.href = '../index.html'; //Redirect para localhost
+    //window.location.href = '/YomuBox/index.html'; //Redirect para GitHub Pages
 }
 
 document.addEventListener('DOMContentLoaded', () => {

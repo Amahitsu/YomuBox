@@ -1,37 +1,35 @@
-// JSON com dados de login
-const users = [
-    {
-        "username": "usuario1",
-        "password": "senha1"
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('formLogin');
+
+  form.addEventListener('submit', async function(event) {
+    event.preventDefault();
+    console.log('Tentativa de login...');
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Log para verificar os valores
+    console.log('Username:', username);
+    console.log('Password:', password);
+
+    try {
+      // Busca todos os usuários cadastrados no servidor
+      const response = await fetch('http://localhost:3000/users');
+      const users = await response.json();
+
+      // Verifica se o usuário e senha correspondem a algum registro
+      const user = users.find(user => user.username === username && user.password === password);
+
+      if (user) {
+        alert('Login realizado com sucesso!');
+        // Redirecionar para a página desejada após o login (por exemplo, página principal)
+        window.location.href = './v1/principal.html'
+      } else {
+        alert('Nome de usuário ou senha incorretos.');
+      }
+    } catch (error) {
+      console.error('Erro:', error);
+      alert('Erro ao conectar ao servidor.');
     }
-];
-
-document.addEventListener('DOMContentLoaded', function () {
-
-    const form = document.getElementById('formLogin');
-    const messageElement = document.getElementById('messageElement');
-    const messageOverlay = document.getElementById('messageOverlay');
-
-    if (!form || !messageElement || !messageOverlay) {
-        console.error('Elemento(s) do formulário ou da mensagem não encontrado(s).');
-        return;
-    }
-
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-
-        if (username === 'usuario1' && password === 'senha1') {
-            messageElement.textContent = 'Login realizado com sucesso!';
-            messageOverlay.style.display = 'flex';
-            window.location.href = './v1/principal.html'
-        } else {
-            messageElement.textContent = 'Nome de usuário ou senha incorretos.';
-            messageOverlay.style.display = 'flex';
-        }
-    });
-    // Limpa o formulário
-    form.reset();
+  });
 });
